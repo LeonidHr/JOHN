@@ -1,0 +1,237 @@
+//ibg / img to background =========================================
+.ibg{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  & img{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+//fonts=============================================================
+//
+//100 - thin
+//300 - lite
+//400 - normal
+//500 - medium
+//600 - semibold
+//700 - bold
+//900 - black
+@import url("https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap");
+//variables=========================================================
+$maxWidthContainer: 855px;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98px + 12;
+$md3: 767.98px + 12;
+$md4: 479.98px + 12;
+//null styles=======================================================
+@import 'null';
+// general styles ====================================================
+@import 'generalStyles';
+//header ============================================================
+@import 'styleHeader';
+// footer==================================================================
+@import 'styleFooter';
+//==================================================================
+@import 'works';
+//main mesh=========================================================
+._container{
+  max-width: $maxWidthContainer + 12;
+  margin: 0 auto;
+  @media (max-width: $md2){
+    max-width: 750px;
+  }
+  @media (max-width: $md3){
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+//page=============================================================
+body{
+  font-family: "Heebo";
+}
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.content{
+  flex: 1 1 auto;
+  padding: 80px 0 0 0;
+  @media (max-width: $md3){
+    &{
+      padding: 24px 0 0 0;
+    }
+  }
+  // .content__main
+  &__main{
+    padding: 128px 0 0 0;
+    @media (max-width: $md3){
+      &--mobi{
+        padding: 33px 0 0 0;
+      }
+    }
+  }
+}
+// hello block =======================================================
+
+
+//====================================================================
+.hello {
+  padding: 0 0 71px 0;
+  @media (max-width: $md3){
+    padding: 0 0 59px 0;
+  }
+  // .hello__body
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (max-width: $md3){
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      padding: 0 16px;
+    }
+  }
+  // .hello__content
+  &__content {
+    flex: 0 1 60%;
+    *:last-child{
+      margin-bottom: 0;
+    }
+  }
+  // .hello__title
+  &__title{
+    margin: 0 0 35px 0;
+    @media (max-width: &md3){
+      margin: 0 0 21 0;
+    }
+  }
+  // .hello__text
+  &__text{
+    margin: 0 0 34px 0; 
+    @media (max-width: &md3){
+      margin: 0 0 27 0;
+    }
+  }
+  // .hello__btn
+  &__btn{
+    margin: 0 0 20px 0;
+  }
+  // .hello__img
+  &__img {
+    flex: 0 0 243px;
+    height: 243px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: -10px 20px 20px -1px #EDF7FA;
+    & img{
+      max-width: 100%;
+    }
+    @media (max-width: $md3){
+      margin: 0 0 34px 0;
+      width: 174px;
+      max-height: 180px ;
+    }
+  }
+}
+// posts block ===================================================
+
+
+//================================================================
+.posts {
+  background-color: #EDF7FA;
+  padding: 27px 0 32px 0;
+  // .posts__header
+  &__header{
+    padding: 0 0 22px 0;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $md3){
+      justify-content: center;
+    }
+  }
+  // .posts__link
+  &__link {
+    font-size: 16px;
+    line-height: 60px;
+    color: #00A8CC;
+    cursor: pointer;
+    @media (max-width: $md3){
+      &{
+        display: none;
+      }
+    }
+  }
+  // .posts__columns
+  &__columns{
+    display: flex;
+    margin: 0 -21.5px;
+    @media (max-width: $md3){
+      flex-direction: column;
+    }
+  }
+  // .posts__column
+  &__column {
+    flex: 0 1 50%;
+    background-color: #fff;
+    margin: 0 21.5px;
+    padding: 24px;
+    @media (max-width: $md3){
+      &{
+        margin: 0 0 29px 0;
+      }
+      &:last-child{
+        margin: 0 0 0 0;
+      }
+    } 
+  }
+  // .posts__title
+  &__title{
+    display: block;
+    margin: 0 0 23px 0;
+  }
+  // .posts__item
+  &__info {
+    margin: 0 0 20px 0;
+  }
+}
+// works block ===================================================
+
+
+//================================================================
+.featured-works {
+  padding: 42px 0 83px 0;
+  // .featured-works__row
+  &__row{
+    @media (max-width: $md3){
+      display: flex;
+      overflow: auto;
+    }
+  }
+  // .featured-works__column
+  &__column{
+    @media (max-width: $md3){
+      flex: 0 0 80%;
+      margin: 0 15px 0 0;
+      display: block;
+    }
+  }
+  // .featured-works__label
+  &__label {
+    margin: 0 0 22px 0;
+    @media (max-width: $md3){
+      text-align: center;
+    }
+  }
+}
+
+
+

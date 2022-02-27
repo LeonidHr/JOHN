@@ -1,0 +1,95 @@
+.title-main {
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 60 / 44 * 100%;
+  @media (max-width: $md3){
+    font-size: 33px;
+  }
+}
+.title{
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 44 / 30 * 100%;
+  color: inherit;
+  transition: color 0.3s ease 0s;
+  @media (min-width: $md3){
+    &:hover{
+      color: #d44b4b;
+    }
+  }
+  @media (max-width: $md3){
+    font-size: 24px;
+  }
+  &--sm{
+    font-size: 26px;
+    line-height: 38 / 26 * 100%;
+    @media (max-width: $md3){
+      font-size: 22px;
+    }
+  }
+}
+.label {
+  font-size: 22px;
+  @media (max-width: $md3){
+    font-size:  18px;
+  }
+}
+.text {
+  font-size: 16px;
+  line-height: 23 / 16 * 100%;
+}
+.info {
+  font-size: 18px;
+  @media (max-width: $md3){
+    font-size: 16px;
+  }
+  // .info__item
+  &__item {
+    & span{
+      padding: 0 26px;
+    }
+  }
+  // .info__label
+  &__label {
+    padding: 0 0 0 26px;
+  }
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29 / 20 * 100%;
+  color: #FFFFFF;
+  padding: 11px 20px;
+  background-color: #FF6464;
+  transition: all 0.3s ease 0s;
+  &:hover{
+    background-color: #d44b4b;
+  }
+}
+.element {
+  display: flex;
+  align-items: center;
+  // .element__year
+  &__year {
+    font-weight: 900;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #142850;
+    padding: 6px 10px;
+    border-radius: 16px;
+    // .element__year--p
+    &--p {
+      background-color: #d44b4b;
+    }
+  }
+  // .element__item
+  &__item {
+    font-size: 20px;
+    @media (max-width: $md3){
+      font-size: 16px;
+    }
+  }
+}

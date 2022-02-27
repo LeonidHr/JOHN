@@ -1,0 +1,8 @@
+@import 'style';
+@import 'styleHeaderWork';
+.work{
+// .works__container
+  &__container{
+    max-width: 682px;
+  }
+}

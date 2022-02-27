@@ -1,0 +1,129 @@
+.header {
+  // .header__content
+  &__content {
+    max-width: 1016px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  //header__menu
+  &__menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 82px;
+    @media (max-width: $md3){
+    &{
+      height: 50px;
+    }
+    }
+  }
+}
+.menu {
+  // .menu__body
+  //&__body {
+  //}
+  // .menu__list
+  &__list {
+    display: flex;
+  }
+  // .menu__item
+  &__item {
+    margin: 0 0 0 33px;
+    @media (max-width: $md3){
+      &{
+        margin: 0 0 25px 0 !important;
+      }
+      &:last-child{
+        margin: 0 !important;
+      }
+    }
+  }
+  // .menu__link
+  &__link {
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+  transition: all 0.3s ease 0s;
+  @media (min-width: $md2){
+      // .menu__link:hover
+      &:hover{
+        color: #FF6464;
+      }
+    }
+  @media (max-width: $md3){
+      &{
+        font-size: 35px !important;
+      }
+    }  
+  }
+}
+.menu-icon {
+  display: none;
+}
+// burger ======================================================
+@media (max-width: $md3){
+  body._lock{
+    overflow: hidden;
+  }
+  .icon-menu {
+    display: block;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 101;
+    // .icon-menu span
+    & span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000000;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease 0s;
+    }
+    & span:first-child{
+      top: 0;
+    }
+    & span:last-child{
+      top: 100%;
+    }
+  }
+  .icon-menu._active {
+    & span{
+      transform: scale(0);
+    }
+    & span:first-child{
+      transform: rotate(45deg);
+      top: 50%;
+    }
+    & span:last-child{
+      transform: rotate(-45deg);
+      top: 50%;
+    }
+  }
+  .menu {
+    // .menu__body
+    &__body {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba( 256, 256, 256, 0.8);
+      top: -100%;
+      transition: all 0.4s ease 0s;
+      overflow: auto;
+      z-index: 100;
+      &._active{
+        top: 0;
+      }
+    }
+    // .menu__list
+    &__list {
+      display: block !important;
+      text-align: center;
+      margin: 70px 0 0 0;
+    }
+  }
+}
