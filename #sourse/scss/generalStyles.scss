@@ -71,7 +71,6 @@
 }
 .element {
   display: flex;
-  align-items: center;
   // .element__year
   &__year {
     font-weight: 900;
@@ -80,6 +79,7 @@
     background-color: #142850;
     padding: 6px 10px;
     border-radius: 16px;
+    align-self: flex-start;
     // .element__year--p
     &--p {
       background-color: #d44b4b;
@@ -87,6 +87,7 @@
   }
   // .element__item
   &__item {
+    margin: 0 0 0 17px;
     font-size: 20px;
     @media (max-width: $md3){
       font-size: 16px;

@@ -1,2 +1,61 @@
 @import 'style';
 @import 'styleHeaderWork';
+.work-detail {
+  max-width: 661px;
+  margin: 0 auto;
+  padding: 0 18px 27px 18px;
+  // .work-detail__title
+  &__title {
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 50 / 34 * 100%;
+    max-width: 500px;
+    margin: 0 0 25px 0;
+    @media (max-width: $md3){
+      font-size: 30px;
+      margin: 0 0 18px 0;
+    }
+  }
+  // .work-detail__element
+  &__element{
+    margin: 0 0 20px 0;
+  }
+  // .work-detail__text
+  &__text {
+    & p {
+      font-size: 16px;
+      line-height: 23 / 16 * 100%;
+      color: #000000;
+      margin: 0 0 42px 0;
+      @media (max-width: $md3){
+        margin: 0 0 20px 0;
+      }
+    }
+    & h2 {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 60 / 30 * 100%;
+      @media (max-width: $md3){
+        font-size: 26px;
+      }
+    }
+    & h3 {
+      font-weight: 500px;
+      font-size: 24px;
+      line-height: 60 / 30 * 100%;
+      @media (max-width: $md3){
+        font-size: 20px;
+      }
+    }
+    & img{
+      margin: 0 0 27px 0;
+      max-width: 100%;
+      @media (max-width: $md3){
+        margin: 0 0 23px 0;
+      }
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+}

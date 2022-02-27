@@ -183,9 +183,6 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .element__year {
   font-weight: 900;
@@ -194,11 +191,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #142850;
   padding: 6px 10px;
   border-radius: 16px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .element__year--p {
   background-color: #d44b4b;
 }
 .element__item {
+  margin: 0 0 0 17px;
   font-size: 20px;
 }
 @media (max-width: 779.98px) {
@@ -448,9 +448,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
-}
-.works__element {
-  margin: 0 0 17px 0;
 }
 .works__element-item {
   margin: 0 0 0 26px;

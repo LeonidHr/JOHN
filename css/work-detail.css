@@ -183,9 +183,6 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .element__year {
   font-weight: 900;
@@ -194,11 +191,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #142850;
   padding: 6px 10px;
   border-radius: 16px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .element__year--p {
   background-color: #d44b4b;
 }
 .element__item {
+  margin: 0 0 0 17px;
   font-size: 20px;
 }
 @media (max-width: 779.98px) {
@@ -448,9 +448,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
-}
-.works__element {
-  margin: 0 0 17px 0;
 }
 .works__element-item {
   margin: 0 0 0 26px;
@@ -825,4 +822,69 @@ body {
 }
 .menu__link_active-1 {
   color: #FF6464;
+}
+
+.work-detail {
+  max-width: 661px;
+  margin: 0 auto;
+  padding: 0 18px 27px 18px;
+}
+.work-detail__title {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 147.0588235294%;
+  max-width: 500px;
+  margin: 0 0 25px 0;
+}
+@media (max-width: 779.98px) {
+  .work-detail__title {
+    font-size: 30px;
+    margin: 0 0 18px 0;
+  }
+}
+.work-detail__element {
+  margin: 0 0 20px 0;
+}
+.work-detail__text p {
+  font-size: 16px;
+  line-height: 143.75%;
+  color: #000000;
+  margin: 0 0 42px 0;
+}
+@media (max-width: 779.98px) {
+  .work-detail__text p {
+    margin: 0 0 20px 0;
+  }
+}
+.work-detail__text h2 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 200%;
+}
+@media (max-width: 779.98px) {
+  .work-detail__text h2 {
+    font-size: 26px;
+  }
+}
+.work-detail__text h3 {
+  font-weight: 500px;
+  font-size: 24px;
+  line-height: 200%;
+}
+@media (max-width: 779.98px) {
+  .work-detail__text h3 {
+    font-size: 20px;
+  }
+}
+.work-detail__text img {
+  margin: 0 0 27px 0;
+  max-width: 100%;
+}
+@media (max-width: 779.98px) {
+  .work-detail__text img {
+    margin: 0 0 23px 0;
+  }
+}
+.work-detail__text img:last-child {
+  margin: 0;
 }
